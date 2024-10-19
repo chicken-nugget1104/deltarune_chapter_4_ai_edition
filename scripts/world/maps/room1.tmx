@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="20" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="49">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="20" height="24" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="51">
  <editorsettings>
   <export target="room1.lua" format="lua"/>
  </editorsettings>
@@ -98,6 +98,9 @@
  </objectgroup>
  <objectgroup color="#7f00ff" id="5" name="markers">
   <object id="20" name="spawn" x="40.091" y="253.119">
+   <point/>
+  </object>
+  <object id="50" name="entry" x="759.519" y="248.96">
    <point/>
   </object>
  </objectgroup>
