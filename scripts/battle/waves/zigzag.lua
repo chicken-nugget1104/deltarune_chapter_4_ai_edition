@@ -1,11 +1,11 @@
-local ZigZagWave, super = Class(Wave)
+local CircleWave, super = Class(Wave)
 
-function ZigZagWave:init()
+function CircleWave:init()
     super.init(self)
     self:setArenaSize(200, 200)
 end
 
-function ZigZagWave:onStart()
+function CircleWave:onStart()
     local numBullets = 6 -- Reduced number of bullets
     local radius = 150
     Game.battle.waves[1].timer:every(0.5, function()
@@ -25,8 +25,8 @@ function ZigZagWave:onStart()
     end)
 end
 
-function ZigZagWave:update()
+function CircleWave:update()
     super.update(self)
 end
 
-return ZigZagWave
+return CircleWave
