@@ -324,32 +324,6 @@ return {
             ["text1"] = "* A odd forest.",
             ["text2"] = "* The snow below you is unmoving."
           }
-        },
-        {
-          id = 39,
-          name = "firefly",
-          type = "",
-          shape = "rectangle",
-          x = 280,
-          y = 320,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 40,
-          name = "MysteriousStone",
-          type = "",
-          shape = "rectangle",
-          x = 602.937,
-          y = 186.088,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {}
         }
       }
     },
