@@ -50,6 +50,7 @@ function CircleWave:onStart()
 end
 
 function CircleWave:update()
+    local arena = Game.battle.arena
     -- Increment timer for arena movement
     self.siner = self.siner + DT
 
