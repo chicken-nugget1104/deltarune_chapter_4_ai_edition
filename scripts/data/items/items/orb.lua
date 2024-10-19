@@ -60,6 +60,7 @@ function item:onBattleUse(target)
     elseif effect == 3 then
         -- Grant 10 TP to the user
         target:explode()
+        Game:removePartyMember(target)
     end
 
     return true
