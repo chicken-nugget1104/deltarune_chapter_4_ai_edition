@@ -29,13 +29,18 @@ function LightPinkSoul:update()
     end
     
     -- Handle input for dashing
-    if Input.pressed("confirm") and self.can_dash and not self.is_dashing then
+    if Input.pressed("up") and self.can_dash and not self.is_dashing then
         self:doDash()
     end
 
     -- Handle parry timing
-    if self.parry_timer > 0 then
+    if self.can_parry and self.parry_timer > 0 then
         self.parry_timer = self.parry_timer - 1
+    end
+
+    -- Handle input for parrying
+    if Input.pressed("down") and self.can_parry and self.parry_timer = 0 then
+        self:doParry()
     end
 end
 
@@ -57,7 +62,7 @@ function LightPinkSoul:doDash()
     Assets.playSound("dash")  -- Play a sound effect for dashing
 end
 
-function LightPinkSoul:parry()
+function LightPinkSoul:doParry()
     if self.can_parry and self.parry_timer <= 0 then
         self.parry_timer = self.parry_window
         -- Code to parry an attack (e.g., blocking or reflecting it)
