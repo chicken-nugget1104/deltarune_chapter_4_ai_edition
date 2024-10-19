@@ -6,7 +6,7 @@ function CircleWave:init()
 end
 
 function CircleWave:onStart()
-    local numBullets = 5 -- Reduced number of bullets (the stupid dum ai note)
+    local numBullets = Utils.random(4, 8) -- Reduced number of bullets (the stupid dum ai note)
     local radius = 150
     local arena = Game.battle.arena
     self.arena_sines = Utils.pick({false,true})
