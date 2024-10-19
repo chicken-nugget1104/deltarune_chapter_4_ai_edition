@@ -29,7 +29,7 @@ function LightPinkSoul:update()
     end
     
     -- Handle input for dashing
-    if Input.pressed("up") and self.can_dash and not self.is_dashing then
+    if Input.pressed("cancel") and self.can_dash and not self.is_dashing then
         self:doDash()
     end
 
@@ -39,7 +39,7 @@ function LightPinkSoul:update()
     end
 
     -- Handle input for parrying
-    if Input.pressed("down") and self.can_parry and self.parry_timer == 0 then
+    if Input.pressed("confirm") and self.can_parry and self.parry_timer == 0 then
         self:doParry()
     end
 end
