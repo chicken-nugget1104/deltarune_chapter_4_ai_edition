@@ -14,7 +14,7 @@
     // The Deltarune chapter you'd like to base your mod off of.
     // Do keep in mind that you can control chapter-specific features
     // one by one using the config below.
-    "chapter": 4
+    "chapter": 4,
 
     // The map that you start in when first starting the mod.
     "map": "room1",
@@ -47,9 +47,11 @@
     // Whether the mod is hidden from the mod selection.
     "hidden": false,
 
-    // Whether the game window's title should be set to the mod's name, when the engine is run
-    // with this mod as the target mod.
-    "setWindowTitle": true,
+    // Whether the game window's title should be set to the mod's name, and the icon to the image
+    // in the file `window_icon.png`.
+    // When your mod is configured as the engine's target mod, it's automatically done unless if
+    // this option is explicitly set to false; else, it's done if this is set to true.
+    "setWindowTitleAndIcon": true,
 
     // Config values for the engine and any libraries you may have.
     // These config values can control chapter-specific features as well.
