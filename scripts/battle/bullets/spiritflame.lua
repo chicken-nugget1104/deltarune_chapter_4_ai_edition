@@ -5,8 +5,8 @@ function SpiritFlame:init(x, y)
     super.init(self, x, y, "bullets/flame")
 
     self:setHitbox(0, 0, self.width, self.height)
-    self.destroy_on_hit = false
-    self:setScale(0.75, 0.75)
+    self.destroy_on_hit = true
+    self:setScale(1, 1)
     self.physics.speed = 2
 end
 
