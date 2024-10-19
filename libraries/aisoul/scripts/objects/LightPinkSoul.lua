@@ -39,7 +39,7 @@ function LightPinkSoul:update()
     end
 
     -- Handle input for parrying
-    if Input.pressed("down") and self.can_parry and self.parry_timer = 0 then
+    if Input.pressed("down") and self.can_parry and self.parry_timer == 0 then
         self:doParry()
     end
 end
@@ -50,13 +50,13 @@ function LightPinkSoul:doDash()
     local dash_direction = self.direction
     
     if dash_direction == "down" then
-        self:move(0, self.dash_distance, DTMULT)
+        self:move(0, self.dash_distance, DT)
     elseif dash_direction == "up" then
-        self:move(0, -self.dash_distance, DTMULT)
+        self:move(0, -self.dash_distance, DT)
     elseif dash_direction == "left" then
-        self:move(-self.dash_distance, 0, DTMULT)
+        self:move(-self.dash_distance, 0, DT)
     elseif dash_direction == "right" then
-        self:move(self.dash_distance, 0, DTMULT)
+        self:move(self.dash_distance, 0, DT)
     end
     
     Assets.playSound("dash")  -- Play a sound effect for dashing
