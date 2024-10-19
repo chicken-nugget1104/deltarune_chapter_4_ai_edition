@@ -4,9 +4,9 @@ function YeetBullet:init(x, y, dir, speed)
     self.yeet_id = Utils.random(1,3,1)
     super.init(self, x, y, "bullets/yeetbullet"..self.yeet_id)
     local hitboxes = {
-        {0,0,7,19}, -- hitbox for yeetbullet1
+        {0,0,13,23}, -- hitbox for yeetbullet1
         {0,6,10,15}, -- hitbox for yeetbullet2
-        {0,0,16,15}, -- etc..
+        {0,8,16,14}, -- etc..
     }
     self.collider = Hitbox(self,unpack(hitboxes[self.yeet_id]))
     
