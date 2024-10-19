@@ -20,7 +20,7 @@ function Basic2:onStart()
         local shift = Utils.random(0, math.pi * 2) + anglesoul - 12
 
         -- Spawn smallbullet going left with speed 8 (see scripts/battle/bullets/smallbullet.lua)
-        local bullet = self:spawnBullet("yeet", x + shift, y - Utils.random(1, 2), math.rad(179), Utils.random(1, 9))
+        local bullet = self:spawnBullet("yeet", x + shift, y - Utils.random(1, 2) + Utils.random(2, 3), math.rad(179), Utils.random(2, 10))
         table.insert(bullets, bullet)
 
         -- Dont remove the bullet offscreen, because we spawn it offscreen
