@@ -4,7 +4,7 @@ function YeetBullet:init(x, y, dir, speed)
     -- Last argument = sprite path
     super.init(self, x, y, "bullets/yeetbullet1")
 
-    setSprite("bullets/yeetbullet" .. Utils.random(1,3))
+    self:setSprite("bullets/yeetbullet" .. Utils.random(1,3))
 
     -- Move the bullet in dir radians (0 = right, pi = left, clockwise rotation)
     self.physics.direction = dir
