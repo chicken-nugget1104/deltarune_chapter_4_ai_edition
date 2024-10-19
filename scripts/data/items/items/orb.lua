@@ -47,11 +47,25 @@ function item:init()
     self.reactions = {}
 end
 
-function item:onWorldUse(target)
-    --uhhhh the ai can code this one for me
-    --i think
+function item:onBattleUse(target)
+    -- Generate a random effect
+    local effect = math.random(3)
 
-    return false
+    if effect == 1 then
+        -- Restore 20 HP to the user
+        target:heal(20)
+        Game.world:showText(target.name .. " restored 20 HP!")
+    elseif effect == 2 then
+        -- Deal 5 damage to the user
+        target:hurt(5)
+        Game.world:showText(target.name .. " took 5 damage!")
+    elseif effect == 3 then
+        -- Grant 10 TP to the user
+        Game:addTP(10)
+        Game.world:showText(target.name .. " gained 10 TP!")
+    end
+
+    return true
 end
 
 return item
