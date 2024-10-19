@@ -25,7 +25,6 @@ function Dummy:init()
     self.waves = {
         "zigzag",
         "flamer",
-        "zigzagmovingarenaedition"
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
