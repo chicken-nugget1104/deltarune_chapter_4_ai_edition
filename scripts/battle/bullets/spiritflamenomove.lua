@@ -7,7 +7,7 @@ function SpiritFlame:init(x, y)
     self.destroy_on_hit = true
     self:setScale(0.99, 0.99)
     self:setHitbox(0, 0, self.width, self.height)
-    self.physics.speed = 2
+    self.physics.speed = love.math.random(3, 8) + 4
 end
 
 function SpiritFlame:update()
