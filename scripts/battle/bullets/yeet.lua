@@ -5,6 +5,7 @@ function YeetBullet:init(x, y, dir, speed)
     super.init(self, x, y, "bullets/yeetbullet1")
 
     self:setSprite("bullets/yeetbullet" .. Utils.random(1,3,1))
+    self.collider = Hitbox(self, self.width/4, self.height/4, self.width/2, self.height/2)
 
     -- Move the bullet in dir radians (0 = right, pi = left, clockwise rotation)
     self.physics.direction = dir
