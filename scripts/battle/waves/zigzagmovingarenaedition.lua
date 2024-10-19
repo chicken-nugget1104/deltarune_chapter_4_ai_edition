@@ -25,24 +25,25 @@ function CircleWave:onStart()
 
     self.timer:every(0.8, function()
         ::start::
-            
+        
+        local x, y = Utils.random(arena:getLeft(), arena:getRight()), Utils.random(arena:getTop(), arena:getBottom())
         local shift = Utils.random(0, math.pi * 2) -- Random starting angle for each wave
 
         for i = 1, numBullets do
             local angle = shift + ((math.pi * 2) / numBullets) * i
-            local x, y = Utils.random(arena:getLeft(), arena:getRight()), Utils.random(arena:getTop(), arena:getBottom())
             local off_x, off_y = math.sin(angle) * 60, math.cos(angle) * 60 -- end numbers control width/height of circle
             local bullet = self:spawnBullet("spiritflame", x + off_x, y + off_y)
             table.insert(bullets, bullet)
 
             if Hitbox(bullet, 0, 0, bullet.width, bullet.height):collidesWith(Game.battle.soul.collider) then
                 for i, bullet in ipairs(bullets) do bullet:remove() end
+                local bullets = {}
                 goto start
             end
 
             -- Add zigzag movement
             self.timer:after(0.5, function()
-                bullet.physics.direction = Utils.angle(bullet.x, bullet.y, 320, 170)
+                bullet.physics.direction = Utils.angle(x + off_x, y + off_y, x, y)
                 bullet.physics.speed = 5 -- defining it in spawnBullet wasnt working so uhh
             end)
         end
