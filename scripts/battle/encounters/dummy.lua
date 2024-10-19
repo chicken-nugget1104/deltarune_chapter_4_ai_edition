@@ -18,8 +18,9 @@ function Dummy:init()
     --self:addEnemy("dummy")
 end
 
-function Dummy:createSoul(x, y)
-    return LightPinkSoul(x, y)
-end
+--- add back when needed :)
+--function Dummy:createSoul(x, y)
+--    return LightPinkSoul(x, y)
+--end
 
 return Dummy
