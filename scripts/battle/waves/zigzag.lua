@@ -8,7 +8,7 @@ end
 function CircleWave:onStart()
     local numBullets = 5 -- Reduced number of bullets (the stupid dum ai note)
     local radius = 150
-    self.timer:every(0.6, function()
+    Game.battle.waves[1].timer:every(0.8, function()
         local startAngle = love.math.random() * 2 * math.pi -- Random starting angle for each wave
         for i = 1, numBullets do
             local angle = startAngle + (i / numBullets) * 2 * math.pi
