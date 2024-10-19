@@ -43,6 +43,8 @@ function actor:init()
         -- (even though there's only 1 idle frame)
         ["idle"] = {"idle", 0.25, true},
         ["hurt"] = {"hurt", 0.25, true},
+        ["spared"] = {"spared", 0.25, true},
+        ["throw"] = {"throw", 0.17, true},
     }
 
     -- Table of sprite offsets (indexed by sprite name)
@@ -50,6 +52,8 @@ function actor:init()
         -- Since the width and height is the idle sprite size, the offset is 0,0
         ["idle"] = {0, 0},
         ["hurt"] = {0, 0},
+        ["spared"] = {0, 0},
+        ["throw"] = {0, 0},
     }
 end
 
