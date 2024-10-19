@@ -305,8 +305,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "room2",
-            ["marker"] = "entry"
+            ["map"] = "forest4",
+            ["marker"] = "entry2"
           }
         },
         {

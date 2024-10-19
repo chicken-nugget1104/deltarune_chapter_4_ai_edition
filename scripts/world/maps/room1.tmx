@@ -85,8 +85,8 @@
   </object>
   <object id="37" name="transition" x="-40" y="200" width="40" height="80">
    <properties>
-    <property name="map" value="room2"/>
-    <property name="marker" value="entry"/>
+    <property name="map" value="forest4"/>
+    <property name="marker" value="entry2"/>
    </properties>
   </object>
   <object id="38" name="savepoint" x="400.208" y="186.088" width="40" height="40">
