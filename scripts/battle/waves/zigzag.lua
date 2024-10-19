@@ -8,7 +8,6 @@ end
 function CircleWave:onStart()
     local numBullets = 5 -- Reduced number of bullets (the stupid dum ai note)
     local radius = 150
-    self.time = -1
     local arena = Game.battle.arena
     self.timer:every(0.8, function()
         ::start::
