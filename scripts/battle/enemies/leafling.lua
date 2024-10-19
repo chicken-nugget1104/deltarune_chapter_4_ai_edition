@@ -5,12 +5,12 @@ function Leafling:init()
 
     -- Enemy name
     self.name = "Leafling"
-    -- Sets the actor, which handles the enemy's sprites (see scripts/data/actors/Leafling.lua)
-    self:setActor("Dummy")
+    -- Sets the actor, which handles the enemy's sprites (see scripts/data/actors/leafling.lua)
+    self:setActor("leafling")
 
     -- Enemy health
-    self.max_health = 150
-    self.health = 150
+    self.max_health = 155
+    self.health = 155
     -- Enemy attack (determines bullet damage)
     self.attack = 2
     -- Enemy defense (usually 0)
@@ -36,57 +36,42 @@ function Leafling:init()
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "AT 2 DF 0\n* Little leaf creature."
+    self.check = "AT 2 DF 1\n* Little leaf creature."
 
     -- Text randomly displayed at the bottom of the screen each turn
     self.text = {
-        "* The Leafling gives you a soft\nsmile.",
-        "* The power of fluffy boys is\nin the air.",
-        "* Smells like cardboard.",
+        "* The leafling floats.",
+        "* Smells like leafs.",
+        "* It's so so small.",
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
-    self.low_health_text = "* The Leafling looks like it's\nabout to fall over."
-
-    -- Register act called "Smile"
-    self:registerAct("Smile")
-    -- Register party act with Ralsei called "Tell Story"
-    -- (second argument is description, usually empty)
-    self:registerAct("Tell Story", "", {"ralsei"})
+    self.low_health_text = "* The Leafling looks like it's\nabout to cry."
 end
 
 function Leafling:onAct(battler, name)
-    if name == "Smile" then
+    if name == "test" then
         -- Give the enemy 100% mercy
-        self:addMercy(100)
+        self:addMercy(1)
         -- Change this enemy's dialogue for 1 turn
-        self.dialogue_override = "... ^^"
+        self.dialogue_override = "test"
         -- Act text (since it's a list, multiple textboxes)
         return {
-            "* You smile.[wait:5]\n* The Leafling smiles back.",
-            "* It seems the Leafling just wanted\nto see you happy."
+            "* test"
         }
-
-    elseif name == "Tell Story" then
-        -- Loop through all enemies
-        for _, enemy in ipairs(Game.battle.enemies) do
-            -- Make the enemy tired
-            enemy:setTired(true)
-        end
-        return "* You and Ralsei told the Leafling\na bedtime story.\n* The enemies became [color:blue]TIRED[color:reset]..."
 
     elseif name == "Standard" then --X-Action
         -- Give the enemy 50% mercy
-        self:addMercy(50)
+        -- self:addMercy(2)
         if battler.chara.id == "ralsei" then
             -- R-Action text
-            return "* Ralsei bowed politely.\n* The Leafling spiritually bowed\nin return."
+            self:addMercy(4)
+            return "* Ralsei did a dance.\nIt wasn't very effective."
         elseif battler.chara.id == "susie" then
-            -- S-Action: start a cutscene (see scripts/battle/cutscenes/Leafling.lua)
-            Game.battle:startActCutscene("Leafling", "susie_punch")
-            return
+            self:addMercy(1)
+            return "* Susie got mad!\nIt wasn't very effective."
         else
             -- Text for any other character (like Noelle)
-            return "* "..battler.chara:getName().." straightened the\nLeafling's hat."
+            return "* "..battler.chara:getName().." did something."
         end
     end
 
