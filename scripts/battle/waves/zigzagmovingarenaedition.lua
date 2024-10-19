@@ -60,7 +60,6 @@ function CircleWave:update()
 
     -- Move the arena
     Game.battle.arena:setPosition(self.arena_start_x, self.arena_start_y + offset)
-    local x, y = Utils.random(arena:getLeft(), arena:getRight()), Utils.random(arena:getTop(), arena:getBottom())
 
     super.update(self)
 end
