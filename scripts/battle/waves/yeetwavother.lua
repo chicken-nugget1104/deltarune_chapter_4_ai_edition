@@ -11,17 +11,16 @@ function Basic2:onStart()
         local x = SCREEN_WIDTH + 20
         -- Get a random Y position between the top and the bottom of the arena
         local y = Utils.random(arena.top, arena.bottom)
-        local shift = Utils.random(0, math.pi * 2)
         local x2 = Game.battle.soul.x - 15
         local y2 = Game.battle.soul.y + 2
 
         local bullets = {}
         -- Get the angle between the bullet position and the soul's position
         local anglesoul = Utils.angle(x2, y2, Game.battle.soul.x, Game.battle.soul.y)
-        local angle = shift + ((math.pi * 2) * x) + anglesoul - 2 + x2 - y2
+        local shift = Utils.random(0, math.pi * 2) + anglesoul - 12
 
         -- Spawn smallbullet going left with speed 8 (see scripts/battle/bullets/smallbullet.lua)
-        local bullet = self:spawnBullet("yeet", x + angle - shift, y - Utils.random(1, 2), math.rad(179), Utils.random(1, 9))
+        local bullet = self:spawnBullet("yeet", x + shift, y - Utils.random(1, 2), math.rad(179), Utils.random(1, 9))
         table.insert(bullets, bullet)
 
         -- Dont remove the bullet offscreen, because we spawn it offscreen
