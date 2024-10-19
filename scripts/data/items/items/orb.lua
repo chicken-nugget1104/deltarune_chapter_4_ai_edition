@@ -54,15 +54,12 @@ function item:onBattleUse(target)
     if effect == 1 then
         -- Restore 20 HP to the user
         target:heal(20)
-        Game.world:showText(target.name .. " restored 20 HP!")
     elseif effect == 2 then
         -- Deal 5 damage to the user
         target:hurt(5)
-        Game.world:showText(target.name .. " took 5 damage!")
     elseif effect == 3 then
         -- Grant 10 TP to the user
-        Game:addTP(10)
-        Game.world:showText(target.name .. " gained 10 TP!")
+        target:explode()
     end
 
     return true

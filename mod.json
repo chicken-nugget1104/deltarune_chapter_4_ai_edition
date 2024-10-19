@@ -24,7 +24,7 @@
 
     // The inventory. Contains three darkburgers, a cell phone and a shadow crystal by default.
     "inventory": {
-        "items": ["orb", "glowshard", "darkburger", "darkburger", "darkburger", "orb"],
+        "items": ["orb", "orb", "orb", "orb", "orb", "orb"],
         "weapons": ["ptwig"],
         "armors": ["mossycharm"],
         "key_items": ["cell_phone", "shadowcrystal"]
