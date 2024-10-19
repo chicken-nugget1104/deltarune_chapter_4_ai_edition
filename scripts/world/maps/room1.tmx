@@ -77,7 +77,6 @@
   <object id="48" x="680" y="320" width="40" height="360"/>
  </objectgroup>
  <objectgroup color="#ff00ff" id="4" name="objects">
-  <object id="27" name="shadow_creature" x="280" y="120" width="40" height="40"/>
   <object id="29" name="transition" x="800" y="200" width="40" height="80">
    <properties>
     <property name="map" value="room2"/>

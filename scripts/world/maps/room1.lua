@@ -278,19 +278,6 @@ return {
       properties = {},
       objects = {
         {
-          id = 27,
-          name = "shadow_creature",
-          type = "",
-          shape = "rectangle",
-          x = 280,
-          y = 120,
-          width = 40,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 29,
           name = "transition",
           type = "",
