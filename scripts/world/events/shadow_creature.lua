@@ -1,10 +1,7 @@
 local ShadowCreature, super = Class(Object)
 
 function ShadowCreature:init(x, y)
-    super.init(self, x, y)
-
-    Kristal.Console:log(self.y)
-    Kristal.Console:log(self.x)
+    super.init(self, x, y) 
 
     -- Load the sprite for the Shadow Creature
     self.sprite = Sprite("objects/shadow_creature")
@@ -28,9 +25,6 @@ function ShadowCreature:update()
     -- Move the creature in its current direction
     self.x = self.x + (self.speed * math.cos(math.rad(self.direction)) + offset_x) * DT
     self.y = self.y + (self.speed * math.sin(math.rad(self.direction)) + offset_y) * DT
-
-    Kristal.Console:log(self.y)
-    Kristal.Console:log(self.x)
 
     -- Randomly change direction occasionally
     if Utils.random() < 0.02 then  -- Chance to change direction
