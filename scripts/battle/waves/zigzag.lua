@@ -25,6 +25,7 @@ function CircleWave:onStart()
 
             if Hitbox(bullet, 0, 0, bullet.width, bullet.height):collidesWith(Game.battle.soul.collider) then
                 for i, bullet in ipairs(bullets) do bullet:remove() end
+                bullets = {}
                 goto start
             end
 
