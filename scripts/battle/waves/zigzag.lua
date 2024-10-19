@@ -9,6 +9,8 @@ function CircleWave:onStart()
     local numBullets = 5 -- Reduced number of bullets (the stupid dum ai note)
     local radius = 150
     local arena = Game.battle.arena
+    self.arena_sines = Utils.pick({false,true})
+    self.siner = 0
     self.timer:every(0.8, function()
         ::start::
         
@@ -25,6 +27,7 @@ function CircleWave:onStart()
 
             if Hitbox(bullet, 0, 0, bullet.width, bullet.height):collidesWith(Game.battle.soul.collider) then
                 for i, bullet in ipairs(bullets) do bullet:remove() end
+                bullets = {}
                 goto start
             end
 
@@ -35,6 +38,16 @@ function CircleWave:onStart()
             end)
         end
     end)
+end
+
+function CircleWave:update()
+    if self.arena_sines then
+        local arena = Game.battle.arena
+        self.siner = self.siner + DT
+        local offset = math.sin(self.siner * 1.5) * 3
+        Game.battle.arena:setPosition(Game.battle.arena.x, Game.battle.arena.y + offset)
+    end
+    super.update(self)
 end
 
 return CircleWave
