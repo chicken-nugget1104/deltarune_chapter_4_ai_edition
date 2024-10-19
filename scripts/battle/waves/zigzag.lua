@@ -44,7 +44,7 @@ function CircleWave:update()
     if self.arena_sines then
         local arena = Game.battle.arena
         self.siner = self.siner + DT
-        local offset = math.sin(self.siner * 1.5) * 3
+        local offset = math.sin(self.siner * 1.5) * 2.5
         Game.battle.arena:setPosition(Game.battle.arena.x, Game.battle.arena.y + offset)
     end
     super.update(self)
