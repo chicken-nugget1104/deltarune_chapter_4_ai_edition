@@ -10,13 +10,13 @@ function Leafling:init()
 
     -- Enemy health
     self.max_health = 150
-    self.health = 149
+    self.health = 150
     -- Enemy attack (determines bullet damage)
     self.attack = 2
     -- Enemy defense (usually 0)
     self.defense = 1
     -- Enemy reward
-    self.money = 100
+    self.money = 7
 
     -- Mercy given when sparing this enemy before its spareable (20% for basic enemies)
     self.spare_points = 7

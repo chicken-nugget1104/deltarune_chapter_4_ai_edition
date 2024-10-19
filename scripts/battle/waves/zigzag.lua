@@ -14,7 +14,7 @@ function CircleWave:onStart()
             local angle = startAngle + (i / numBullets) * 2 * math.pi
             local x = radius * math.cos(angle) + 320
             local y = radius * math.sin(angle) + 170
-            local bullet = self:spawnBullet("smallbullet", x, y, angle, 5)
+            local bullet = self:spawnBullet("spiritflamenomove", x, y, angle, 5)
             bullet.remove_offscreen = false
 
             -- Add zigzag movement

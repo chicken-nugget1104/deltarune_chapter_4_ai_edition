@@ -4,7 +4,7 @@ function Dummy:init()
     super.init(self)
 
     -- Enemy name
-    self.name = "Dummy"
+    self.name = "Dummy2"
     -- Sets the actor, which handles the enemy's sprites (see scripts/data/actors/dummy.lua)
     self:setActor("dummy")
 
@@ -23,9 +23,8 @@ function Dummy:init()
 
     -- List of possible wave ids, randomly picked each turn
     self.waves = {
-        "basic",
-        "aiming",
-        "movingarena"
+        "zigzag",
+        "flamer"
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
@@ -34,7 +33,7 @@ function Dummy:init()
     }
 
     -- Check text (automatically has "ENEMY NAME - " at the start)
-    self.check = "AT 4 DF 0\n* Cotton heart and button eye\n* Looks just like a fluffy guy."
+    self.check = "test2"
 
     -- Text randomly displayed at the bottom of the screen each turn
     self.text = {
@@ -43,7 +42,7 @@ function Dummy:init()
         "* Smells like cardboard.",
     }
     -- Text displayed at the bottom of the screen when the enemy has low health
-    self.low_health_text = "* The dummy looks like it's\nabout to fall over."
+    self.low_health_text = "* low health"
 
     -- Register act called "Smile"
     self:registerAct("Smile")
