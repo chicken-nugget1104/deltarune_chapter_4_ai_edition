@@ -9,8 +9,8 @@ function Dummy:init()
     self:setActor("dummy")
 
     -- Enemy health
-    self.max_health = 450
-    self.health = 450
+    self.max_health = 6666666666666
+    self.health = 6666666666666
     -- Enemy attack (determines bullet damage)
     self.attack = 4
     -- Enemy defense (usually 0)
@@ -24,7 +24,8 @@ function Dummy:init()
     -- List of possible wave ids, randomly picked each turn
     self.waves = {
         "zigzag",
-        "flamer"
+        "flamer",
+        "zigzagmovingarenaedition"
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
