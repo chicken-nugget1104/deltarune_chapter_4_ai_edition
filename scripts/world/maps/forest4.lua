@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 18,
+  nextobjectid = 20,
   properties = {},
   tilesets = {
     {
@@ -246,6 +246,22 @@ return {
           visible = true,
           properties = {
             ["text1"] = "* (Blood.)"
+          }
+        },
+        {
+          id = 19,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 2560,
+          y = 120,
+          width = 40,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "room1",
+            ["marker"] = "entryfore"
           }
         }
       }
