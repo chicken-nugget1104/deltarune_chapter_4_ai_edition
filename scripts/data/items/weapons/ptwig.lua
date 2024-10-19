@@ -1,27 +1,27 @@
-local item, super = Class(Item, "mossycharm")
+local item, super = Class(Item, "ptwig")
 
 function item:init()
     super.init(self)
 
     -- Display name
-    self.name = "M.Charm"
+    self.name = "P. Twig"
 
     -- Item type (item, key, weapon, armor)
-    self.type = "armor"
+    self.type = "weapon"
     -- Item icon (for equipment)
-    self.icon = "ui/menu/icon/armor"
+    self.icon = "ui/menu/icon/sword"
 
     -- Battle description
     self.effect = ""
     -- Shop description
-    self.shop = "Charm."
+    self.shop = ""
     -- Menu description
-    self.description = "A charm covered in soft moss.\nIt smells of damp earth\nand gives off a faint, comforting warmth."
+    self.description = "A twig turned to stone by ancient magic."
 
     -- Default shop price (sell price is halved)
-    self.price = 545
+    self.price = 60
     -- Whether the item can be sold
-    self.can_sell = true
+    self.can_sell = false
 
     -- Consumable target mode (ally, party, enemy, enemies, or none)
     self.target = "none"
@@ -34,21 +34,28 @@ function item:init()
 
     -- Equip bonuses (for weapons and armor)
     self.bonuses = {
-        defense = 3,
+        attack = 4,
+        defense = -1
     }
     -- Bonus name and icon (displayed in equip menu)
     self.bonus_name = nil
     self.bonus_icon = nil
 
     -- Equippable characters (default true for armors, false for weapons)
-    self.can_equip = {}
+    self.can_equip = {
+        kris = true,
+    }
 
     -- Character reactions
     self.reactions = {
-        susie = "diagtest",
-        ralsei = "apple",
-        noelle = "test of noelle lol",
+        susie = "What's this dumb thing?!",
+        ralsei = "Uhhh....",
+        noelle = "(It has bite marks...)",
     }
+end
+
+function item:convertToLightEquip(chara)
+    return "light/pencil"
 end
 
 return item
