@@ -22,4 +22,10 @@ function Basic2:onStart()
     end)
 end
 
+function Basic2:onArenaExit()
+    for i, attacker in ipairs(self:getAttackers()) do
+        attacker:setAnimation("idle")
+    end
+end
+
 return Basic2
