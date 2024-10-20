@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 35,
+  nextobjectid = 36,
   properties = {},
   tilesets = {
     {
@@ -597,6 +597,22 @@ return {
           visible = true,
           properties = {
             ["map"] = "forest1real",
+            ["marker"] = "entry"
+          }
+        },
+        {
+          id = 35,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 960,
+          y = 1200,
+          width = 80,
+          height = 81,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "forest3",
             ["marker"] = "entry"
           }
         }
