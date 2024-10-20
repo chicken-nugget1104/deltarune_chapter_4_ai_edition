@@ -1,4 +1,4 @@
-local Firefly, super = Class(Object)
+local Firefly, super = Class(Event)
 
 function Firefly:init(x, y)
     super.init(self, x, y)
