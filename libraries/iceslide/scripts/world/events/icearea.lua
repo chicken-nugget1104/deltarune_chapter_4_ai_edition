@@ -10,6 +10,20 @@ function IceArea:init(data)
     self.sound = properties["sound"] or nil -- sound property to play when you enter the icearea. string in Tiled.
 end
 
+function IceArea:onCollide(chara)
+    if (chara.last_y or chara.y) < self.y + self.height and chara.is_player then
+        if chara.state ~= "ICESLIDE" then
+            if self:checkAgainstWall(chara) then return end
+
+            Assets.stopAndPlaySound("noise")
+        end
+
+        chara:setState("ICESLIDE", false)
+
+        chara.current_iceslide_area = self
+    end
+end
+
 function IceArea:onEnter(chara)
     if chara.is_player then
         if chara.state ~= "ICESLIDE" and self.sound then
@@ -43,6 +57,52 @@ function IceArea:onExit(chara)
         chara:setState("WALK")
         chara.current_iceslide_area = nil
     end
+end
+
+function IceArea:update()
+    if not Game.world.player then return end
+
+    local stopped = false
+
+    Object.startCache()
+
+    if Game.world.player.y > self.y + self.height and not Game.world.player:collidesWith(self.collider) then
+        self.solid = true
+
+        if Game.world.player.state == "ICESLIDE" and Game.world.player.current_iceslide_area == self then
+            stopped = true
+        end
+    else
+        self.solid = false
+    end
+
+    if not stopped and Game.world.player.state == "ICESLIDE" and Game.world.player.current_iceslide_area == self then
+        stopped = self:checkAgainstWall(Game.world.player)
+    end
+
+    Object.endCache()
+
+    if stopped then
+        Game.world.player:setState("WALK")
+
+        Game.world.player.current_iceslide_area = nil
+    end
+
+    super.update(self)
+end
+
+function IceArea:checkAgainstWall(chara)
+    local hb = chara.collider
+
+    if hb and hb:includes(Hitbox) then
+        local extended_hitbox = Hitbox(chara, hb.x + 0.25, hb.y + 0.25, hb.width - 0.5, (hb.height - 0.5) * 1.5)
+
+        if self.world:checkCollision(extended_hitbox) then
+            return true
+        end
+    end
+
+    return false
 end
 
 return IceArea
