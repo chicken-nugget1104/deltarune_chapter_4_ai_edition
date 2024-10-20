@@ -10,9 +10,9 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 51,
+  nextobjectid = 52,
   properties = {
-    ["name"] = "Test Map - Room 1"
+    ["name"] = "Overgrown Forest - Pathway"
   },
   tilesets = {
     {
@@ -107,9 +107,9 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 41, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -178,7 +178,7 @@ return {
           x = 560,
           y = 320,
           width = 40,
-          height = 280,
+          height = 240,
           rotation = 0,
           visible = true,
           properties = {}
@@ -188,7 +188,7 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-          x = 240,
+          x = 280,
           y = 560,
           width = 320,
           height = 40,
@@ -204,7 +204,7 @@ return {
           x = 240,
           y = 440,
           width = 40,
-          height = 120,
+          height = 160,
           rotation = 0,
           visible = true,
           properties = {}
@@ -305,8 +305,8 @@ return {
           rotation = 0,
           visible = true,
           properties = {
-            ["map"] = "room2",
-            ["marker"] = "entry"
+            ["map"] = "forest4",
+            ["marker"] = "entry2"
           }
         },
         {
@@ -361,6 +361,19 @@ return {
           shape = "point",
           x = 759.519,
           y = 248.96,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 51,
+          name = "entryfore",
+          type = "",
+          shape = "point",
+          x = 40.091,
+          y = 253.665,
           width = 0,
           height = 0,
           rotation = 0,

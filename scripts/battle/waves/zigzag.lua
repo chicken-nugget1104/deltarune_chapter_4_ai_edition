@@ -6,7 +6,7 @@ function CircleWave:init()
 end
 
 function CircleWave:onStart()
-    local numBullets = 5 -- Reduced number of bullets (the stupid dum ai note)
+    local numBullets = Utils.random(4, 8, 1) -- Reduced number of bullets (the stupid dum ai note)
     local radius = 150
     local arena = Game.battle.arena
     self.arena_sines = Utils.pick({false,true})
@@ -21,9 +21,10 @@ function CircleWave:onStart()
 
         for i = 1, numBullets do
             local angle = shift + ((math.pi * 2) / numBullets) * i
-            local off_x, off_y = math.sin(angle) * 60, math.cos(angle) * 60 -- end numbers control width/height of circle
+            local off_x, off_y = math.sin(angle) * (70 + 5 * numBullets), math.cos(angle) * (70 + 5 * numBullets) -- end numbers control width/height of circle
             local bullet = self:spawnBullet("spiritflame", x + off_x, y + off_y)
             table.insert(bullets, bullet)
+            bullet.remove_offscreen = false
 
             if Hitbox(bullet, 0, 0, bullet.width, bullet.height):collidesWith(Game.battle.soul.collider) then
                 for i, bullet in ipairs(bullets) do bullet:remove() end
