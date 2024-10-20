@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 24,
+  nextobjectid = 26,
   properties = {},
   tilesets = {
     {
@@ -387,26 +387,10 @@ return {
           x = 1280,
           y = 440,
           width = 80,
-          height = 80,
+          height = 40,
           rotation = 0,
           visible = true,
           properties = {}
-        },
-        {
-          id = 23,
-          name = "transition",
-          type = "",
-          shape = "rectangle",
-          x = 1280,
-          y = 499,
-          width = 80,
-          height = 65,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["map"] = "room1",
-            ["marker"] = "entryfore"
-          }
         }
       }
     },
@@ -439,6 +423,22 @@ return {
             ["cutscene"] = "kriswheretheHECKarewe.wall",
             ["once"] = true
           }
+        },
+        {
+          id = 24,
+          name = "transition",
+          type = "",
+          shape = "rectangle",
+          x = 1280,
+          y = 480,
+          width = 80,
+          height = 88,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["map"] = "forest2",
+            ["marker"] = "entry"
+          }
         }
       }
     },
@@ -463,6 +463,19 @@ return {
           shape = "point",
           x = 400,
           y = 800,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 25,
+          name = "entry",
+          type = "",
+          shape = "point",
+          x = 1320,
+          y = 640,
           width = 0,
           height = 0,
           rotation = 0,
