@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="79" height="43" tilewidth="40" tileheight="40" infinite="0" nextlayerid="5" nextobjectid="83">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="79" height="43" tilewidth="40" tileheight="40" infinite="0" nextlayerid="5" nextobjectid="85">
  <editorsettings>
   <export target="forestnew1.lua" format="lua"/>
  </editorsettings>
@@ -133,7 +133,18 @@
   <object id="82" name="interactable" x="40" y="1080" width="1240" height="680">
    <properties>
     <property name="text1" value="* (What?)"/>
-    <property name="text2" value="we love you mettaton! we love you mettaton!"/>
+    <property name="text2" value="we love you mettaton![wait:5] we love you mettaton!"/>
+    <property name="text3" value="i am going to t e s t some stuff"/>
+    <property name="text4">[color:red]fallen child of man[color:reset]
+you will[wait:3] die.
+yay
+yaya
+yayay
+yayaya
+yayayay
+yayayaya
+yayayayay
+yayayayaya</property>
    </properties>
   </object>
  </objectgroup>

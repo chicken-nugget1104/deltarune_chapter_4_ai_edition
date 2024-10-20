@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 5,
-  nextobjectid = 83,
+  nextobjectid = 85,
   properties = {},
   tilesets = {
     {
@@ -1115,7 +1115,9 @@ return {
           visible = true,
           properties = {
             ["text1"] = "* (What?)",
-            ["text2"] = "we love you mettaton! we love you mettaton!"
+            ["text2"] = "we love you mettaton![wait:5] we love you mettaton!",
+            ["text3"] = "i am going to t e s t some stuff",
+            ["text4"] = "[color:red]fallen child of man[color:reset]\nyou will[wait:3] die.\nyay\nyaya\nyayay\nyayaya\nyayayay\nyayayaya\nyayayayay\nyayayayaya"
           }
         }
       }
