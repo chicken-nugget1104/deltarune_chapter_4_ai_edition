@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 8,
-  nextobjectid = 60,
+  nextobjectid = 61,
   properties = {},
   tilesets = {
     {
@@ -761,6 +761,22 @@ return {
           properties = {
             ["map"] = "forest2",
             ["marker"] = "entry23"
+          }
+        },
+        {
+          id = 60,
+          name = "npc",
+          type = "",
+          shape = "rectangle",
+          x = 1640,
+          y = 320,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "stone",
+            ["text1"] = "* (A Stone, strange symbols are on it.)"
           }
         }
       }
