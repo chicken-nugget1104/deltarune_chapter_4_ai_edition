@@ -11,7 +11,9 @@ return {
   tileheight = 40,
   nextlayerid = 6,
   nextobjectid = 52,
-  properties = {},
+  properties = {
+    ["name"] = "Overgrown Forest - Maze of dreams"
+  },
   tilesets = {
     {
       name = "forest",
