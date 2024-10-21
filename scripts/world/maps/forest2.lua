@@ -10,10 +10,8 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 51,
-  properties = {
-    ["name"] = "Overgrown Forest - Maze of dreams"
-  },
+  nextobjectid = 52,
+  properties = {},
   tilesets = {
     {
       name = "forest",
@@ -790,6 +788,19 @@ return {
           shape = "rectangle",
           x = 1880,
           y = 1440,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 51,
+          name = "spawn",
+          type = "",
+          shape = "point",
+          x = 600,
+          y = 440,
           width = 0,
           height = 0,
           rotation = 0,
