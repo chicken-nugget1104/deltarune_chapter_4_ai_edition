@@ -1,4 +1,4 @@
 .vscode/
 *.tiled-session
-scripts/world/maps/gaster.tmx
-scripts/world/maps/gaster.lua
+scripts/world/maps/gaster2.tmx
+scripts/world/maps/gaster2.lua

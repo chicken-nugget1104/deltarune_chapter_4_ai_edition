@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="5" height="5" tilewidth="40" tileheight="40" infinite="0" nextlayerid="7" nextobjectid="12">
+ <tileset firstgid="1" source="../tilesets/forest.tsx"/>
+ <layer id="1" name="tiles" width="5" height="5">
+  <data encoding="csv">
+21,21,21,21,21,
+21,21,21,21,21,
+21,21,21,21,21,
+21,21,21,21,21,
+21,21,21,21,21
+</data>
+ </layer>
+ <objectgroup id="3" name="text">
+  <object id="4" x="0" y="0" width="200" height="80">
+   <text wrap="1">i am gastr d w gsostor
+
+be scared</text>
+  </object>
+ </objectgroup>
+ <objectgroup id="4" name="collision">
+  <object id="5" x="0" y="0" width="160" height="40"/>
+  <object id="6" x="0" y="40" width="80" height="40"/>
+ </objectgroup>
+ <objectgroup id="5" name="objects">
+  <object id="7" name="transition" x="200" y="-40" width="80" height="281">
+   <properties>
+    <property name="map" value="forest3"/>
+    <property name="marker" value="entry666GASTERSENTRY"/>
+   </properties>
+  </object>
+  <object id="8" name="transition" x="-40" y="-280" width="240" height="281">
+   <properties>
+    <property name="map" value="forest3"/>
+    <property name="marker" value="entry666GASTERSENTRY"/>
+   </properties>
+  </object>
+  <object id="9" name="transition" x="-80" y="-40" width="80" height="281">
+   <properties>
+    <property name="map" value="forest3"/>
+    <property name="marker" value="entry666GASTERSENTRY"/>
+   </properties>
+  </object>
+  <object id="10" name="transition" x="0" y="200" width="200" height="281">
+   <properties>
+    <property name="map" value="forest3"/>
+    <property name="marker" value="entry666GASTERSENTRY"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="6" name="markers">
+  <object id="11" name="warpy" x="120" y="120">
+   <point/>
+  </object>
+ </objectgroup>
+</map>
