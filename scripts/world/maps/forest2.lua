@@ -10,10 +10,8 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 52,
-  properties = {
-    ["name"] = "Overgrown Forest - Maze of dreams"
-  },
+  nextobjectid = 53,
+  properties = {},
   tilesets = {
     {
       name = "forest",
@@ -727,6 +725,19 @@ return {
             ["text1"] = "* This weird forest...",
             ["text2"] = "* It fills you with [color:red]DETERMINATION[color:reset]."
           }
+        },
+        {
+          id = 52,
+          name = "encounterzone",
+          type = "",
+          shape = "rectangle",
+          x = 120,
+          y = 120,
+          width = 1680,
+          height = 1560,
+          rotation = 0,
+          visible = true,
+          properties = {}
         }
       }
     },

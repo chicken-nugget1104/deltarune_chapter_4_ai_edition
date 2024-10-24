@@ -10,7 +10,7 @@ return {
   tilewidth = 40,
   tileheight = 40,
   nextlayerid = 6,
-  nextobjectid = 26,
+  nextobjectid = 27,
   properties = {},
   tilesets = {
     {
@@ -438,6 +438,21 @@ return {
           properties = {
             ["map"] = "forest2",
             ["marker"] = "entry"
+          }
+        },
+        {
+          id = 26,
+          name = "encounterzone",
+          type = "",
+          shape = "rectangle",
+          x = 120,
+          y = 440,
+          width = 1320,
+          height = 520,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["type"] = "no"
           }
         }
       }

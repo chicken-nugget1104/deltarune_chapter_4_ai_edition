@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="34" height="35" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="26">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="34" height="35" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="27">
  <editorsettings>
   <export target="forest1real.lua" format="lua"/>
  </editorsettings>
@@ -114,6 +114,11 @@
    <properties>
     <property name="map" value="forest2"/>
     <property name="marker" value="entry"/>
+   </properties>
+  </object>
+  <object id="26" name="encounterzone" x="120" y="440" width="1320" height="520">
+   <properties>
+    <property name="type" value="no"/>
    </properties>
   </object>
  </objectgroup>
