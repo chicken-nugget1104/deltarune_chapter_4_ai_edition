@@ -9,15 +9,14 @@ return {
   height = 70,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 5,
-  nextobjectid = 216,
+  nextlayerid = 6,
+  nextobjectid = 221,
   properties = {},
   tilesets = {
     {
       name = "forest",
       firstgid = 1,
-      filename = "../tilesets/forest.tsx",
-      exportfilename = "../tilesets/forest.lua"
+      filename = "../tilesets/forest.tsx"
     }
   },
   layers = {
@@ -2743,6 +2742,117 @@ return {
     {
       type = "objectgroup",
       draworder = "topdown",
+      id = 5,
+      name = "paths",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 216,
+          name = "virovirokun",
+          type = "",
+          shape = "ellipse",
+          x = 600,
+          y = 2240,
+          width = 465.574,
+          height = 80,
+          rotation = 0,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 217,
+          name = "outta_here",
+          type = "",
+          shape = "polyline",
+          x = 780,
+          y = 2246,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = 260, y = -6 },
+            { x = 260, y = 514 },
+            { x = 620, y = 514 }
+          },
+          properties = {}
+        },
+        {
+          id = 220,
+          name = "",
+          type = "",
+          shape = "polyline",
+          x = 1400,
+          y = 2400,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          polyline = {
+            { x = 0, y = 0 },
+            { x = -200, y = 0 },
+            { x = -200, y = -560 },
+            { x = -880, y = -560 },
+            { x = -880, y = -840 },
+            { x = -960, y = -840 },
+            { x = -960, y = -1000 },
+            { x = -1200, y = -1000 },
+            { x = -1200, y = -760 },
+            { x = -1120, y = -760 },
+            { x = -1120, y = -440 },
+            { x = -1000, y = -440 },
+            { x = -1000, y = -200 },
+            { x = -1320, y = -200 },
+            { x = -1320, y = -720 },
+            { x = -1320, y = -1560 },
+            { x = -840, y = -1560 },
+            { x = -840, y = -1400 },
+            { x = -1160, y = -1400 },
+            { x = -1160, y = -1200 },
+            { x = -760, y = -1200 },
+            { x = -760, y = -1040 },
+            { x = -600, y = -1040 },
+            { x = -600, y = -920 },
+            { x = -680, y = -920 },
+            { x = -680, y = -720 },
+            { x = -600, y = -720 },
+            { x = -600, y = -640 },
+            { x = -200, y = -680 },
+            { x = -200, y = -1240 },
+            { x = 80, y = -1240 },
+            { x = 80, y = -1080 },
+            { x = 80, y = -960 },
+            { x = -80, y = -960 },
+            { x = -80, y = -640 },
+            { x = 400, y = -680 },
+            { x = 560, y = -680 },
+            { x = 600, y = -760 },
+            { x = 1000, y = -760 },
+            { x = 1000, y = -480 },
+            { x = 800, y = -480 },
+            { x = 800, y = 40 },
+            { x = 800, y = 80 },
+            { x = 1200, y = 80 },
+            { x = 1200, y = 200 },
+            { x = 1640, y = 200 },
+            { x = 1640, y = -280 },
+            { x = 1640, y = -240 }
+          },
+          properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
       id = 4,
       name = "objects",
       class = "",
@@ -2844,6 +2954,25 @@ return {
           properties = {
             ["map"] = "forest2",
             ["marker"] = "entry8281"
+          }
+        },
+        {
+          id = 219,
+          name = "enemy",
+          type = "",
+          shape = "rectangle",
+          x = 920,
+          y = 2280,
+          width = 40,
+          height = 40,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["actor"] = "leafling",
+            ["chase"] = false,
+            ["encounter"] = "leafling",
+            ["path"] = "virovirokun",
+            ["progress"] = "-0.1"
           }
         }
       }

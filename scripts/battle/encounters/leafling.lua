@@ -1,13 +1,7 @@
-local EncGroup, super = Class(RandomEncounter, "leafling")
+local Dummy, super = Class(Encounter)
 
-function EncGroup:init()
+function Dummy:init()
     super.init(self)
-    
-    self.population = nil
-    self.use_population_factor = true
-    
-    -- Table with the encounters that can be triggered by this random encounter
-    self.encounters = {"leafling"}
 
     -- Text displayed at the bottom of the screen at the start of the encounter
     self.text = "* A leafling appears!"
@@ -16,6 +10,9 @@ function EncGroup:init()
     self.music = "battle"
     -- Enables the purple grid battle background
     self.background = true
+
+    -- Add the dummy enemy to the encounter
+    self:addEnemy("leafling")
 end
 
-return EncGroup
+return Dummy
