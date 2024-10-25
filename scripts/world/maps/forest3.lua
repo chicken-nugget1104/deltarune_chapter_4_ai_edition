@@ -1327,58 +1327,6 @@ return {
             ["map"] = "forest5",
             ["marker"] = "entry1"
           }
-        },
-        {
-          id = 104,
-          name = "encounterzone",
-          type = "",
-          shape = "rectangle",
-          x = 320,
-          y = 0,
-          width = 400,
-          height = 880,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 105,
-          name = "encounterzone",
-          type = "",
-          shape = "rectangle",
-          x = 720,
-          y = 560,
-          width = 840,
-          height = 320,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 106,
-          name = "encounterzone",
-          type = "",
-          shape = "rectangle",
-          x = 1560,
-          y = 240,
-          width = 640,
-          height = 640,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 107,
-          name = "encounterzone",
-          type = "",
-          shape = "rectangle",
-          x = 2000,
-          y = 40,
-          width = 120,
-          height = 200,
-          rotation = 0,
-          visible = true,
-          properties = {}
         }
       }
     },

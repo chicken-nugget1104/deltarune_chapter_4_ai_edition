@@ -116,11 +116,6 @@
     <property name="marker" value="entry"/>
    </properties>
   </object>
-  <object id="26" name="encounterzone" x="120" y="440" width="1320" height="520">
-   <properties>
-    <property name="type" value="no"/>
-   </properties>
-  </object>
  </objectgroup>
  <objectgroup color="#ffaa00" id="3" name="markers">
   <object id="1" name="spawn" x="400" y="800">

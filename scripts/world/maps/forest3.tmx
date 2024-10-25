@@ -188,10 +188,6 @@
     <property name="marker" value="entry1"/>
    </properties>
   </object>
-  <object id="104" name="encounterzone" x="320" y="0" width="400" height="880"/>
-  <object id="105" name="encounterzone" x="720" y="560" width="840" height="320"/>
-  <object id="106" name="encounterzone" x="1560" y="240" width="640" height="640"/>
-  <object id="107" name="encounterzone" x="2000" y="40" width="120" height="200"/>
  </objectgroup>
  <objectgroup color="#5b5023" id="7" name="markers">
   <object id="43" name="entry" x="480" y="80">

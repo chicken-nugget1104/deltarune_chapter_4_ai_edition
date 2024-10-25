@@ -725,19 +725,6 @@ return {
             ["text1"] = "* This weird forest...",
             ["text2"] = "* It fills you with [color:red]DETERMINATION[color:reset]."
           }
-        },
-        {
-          id = 52,
-          name = "encounterzone",
-          type = "",
-          shape = "rectangle",
-          x = 120,
-          y = 120,
-          width = 1680,
-          height = 1560,
-          rotation = 0,
-          visible = true,
-          properties = {}
         }
       }
     },

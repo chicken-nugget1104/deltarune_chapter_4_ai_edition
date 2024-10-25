@@ -439,21 +439,6 @@ return {
             ["map"] = "forest2",
             ["marker"] = "entry"
           }
-        },
-        {
-          id = 26,
-          name = "encounterzone",
-          type = "",
-          shape = "rectangle",
-          x = 120,
-          y = 440,
-          width = 1320,
-          height = 520,
-          rotation = 0,
-          visible = true,
-          properties = {
-            ["type"] = "no"
-          }
         }
       }
     },

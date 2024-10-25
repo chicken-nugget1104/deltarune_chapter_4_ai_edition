@@ -168,7 +168,6 @@
     <property name="text2" value="* It fills you with [color:red]DETERMINATION[color:reset]."/>
    </properties>
   </object>
-  <object id="52" name="encounterzone" x="120" y="120" width="1680" height="1560"/>
  </objectgroup>
  <objectgroup color="#ffff00" id="4" name="markers">
   <object id="29" name="entry" x="441" y="390">
