@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="20" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="12">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="20" height="12" tilewidth="40" tileheight="40" infinite="0" nextlayerid="6" nextobjectid="12">
  <editorsettings>
   <export target="room2.lua" format="lua"/>
  </editorsettings>
  <properties>
-  <property name="name" value="Test Map - Room 2"/>
+  <property name="name" value="fortnit"/>
  </properties>
  <tileset firstgid="1" source="../tilesets/castle.tsx"/>
  <layer id="1" name="tiles" width="20" height="12">
@@ -40,11 +40,8 @@
 </data>
  </layer>
  <objectgroup color="#0000ff" id="3" name="collision" opacity="0.5">
-  <object id="1" x="120" y="120" width="40" height="200"/>
-  <object id="2" x="0" y="400" width="760" height="40"/>
-  <object id="3" x="760" y="120" width="40" height="280"/>
-  <object id="4" x="160" y="80" width="600" height="40"/>
-  <object id="7" x="0" y="280" width="120" height="40"/>
+  <object id="4" x="120" y="0" width="680" height="480"/>
+  <object id="7" x="0" y="0" width="120" height="480"/>
  </objectgroup>
  <objectgroup color="#7f00ff" id="4" name="markers">
   <object id="5" name="spawn" x="360" y="240">

@@ -1,7 +1,8 @@
 return {
-  version = "1.5",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.8.4",
+  tiledversion = "1.11.0",
+  class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
   width = 20,
@@ -11,13 +12,14 @@ return {
   nextlayerid = 6,
   nextobjectid = 12,
   properties = {
-    ["name"] = "Test Map - Room 2"
+    ["name"] = "fortnit"
   },
   tilesets = {
     {
       name = "castle",
       firstgid = 1,
-      filename = "../tilesets/castle.tsx"
+      filename = "../tilesets/castle.tsx",
+      exportfilename = "../tilesets/castle.lua"
     }
   },
   layers = {
@@ -29,6 +31,7 @@ return {
       height = 12,
       id = 1,
       name = "tiles",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -60,6 +63,7 @@ return {
       height = 12,
       id = 2,
       name = "decal",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -88,6 +92,7 @@ return {
       draworder = "topdown",
       id = 3,
       name = "collision",
+      class = "",
       visible = true,
       opacity = 0.5,
       offsetx = 0,
@@ -97,53 +102,14 @@ return {
       properties = {},
       objects = {
         {
-          id = 1,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 120,
-          y = 120,
-          width = 40,
-          height = 200,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 2,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 0,
-          y = 400,
-          width = 760,
-          height = 40,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
-          id = 3,
-          name = "",
-          type = "",
-          shape = "rectangle",
-          x = 760,
-          y = 120,
-          width = 40,
-          height = 280,
-          rotation = 0,
-          visible = true,
-          properties = {}
-        },
-        {
           id = 4,
           name = "",
           type = "",
           shape = "rectangle",
-          x = 160,
-          y = 80,
-          width = 600,
-          height = 40,
+          x = 120,
+          y = 0,
+          width = 680,
+          height = 480,
           rotation = 0,
           visible = true,
           properties = {}
@@ -154,9 +120,9 @@ return {
           type = "",
           shape = "rectangle",
           x = 0,
-          y = 280,
+          y = 0,
           width = 120,
-          height = 40,
+          height = 480,
           rotation = 0,
           visible = true,
           properties = {}
@@ -168,6 +134,7 @@ return {
       draworder = "topdown",
       id = 4,
       name = "markers",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
@@ -209,6 +176,7 @@ return {
       draworder = "topdown",
       id = 5,
       name = "objects",
+      class = "",
       visible = true,
       opacity = 1,
       offsetx = 0,
