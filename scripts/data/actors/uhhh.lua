@@ -44,7 +44,7 @@ function actor:init()
         ["idle"] = {"idle", 0.25, true},
         ["hurt"] = {"hurt", 0.25, true},
         ["spared"] = {"spared", 0.25, true},
-        ["throw"] = {"throw", 0.17, true},
+        ["throw"] = {"throw", 0.17, false},
     }
 
     -- Table of sprite offsets (indexed by sprite name)

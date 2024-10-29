@@ -23,9 +23,7 @@ function Leafling:init()
 
     -- List of possible wave ids, randomly picked each turn
     self.waves = {
-        "basic",
-        "aiming",
-        "movingarena"
+        "leaf"
     }
 
     -- Dialogue randomly displayed in the enemy's speech bubble
